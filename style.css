@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 59px;
+    background-color: #6601EB;
+    padding: 10px;
+
+}
+
+.heading {
+    color: white;
+    font-weight: 600;
+    font-family: Helvetica Neue;
+    font-size: 28px;
+    margin-left: 30px;
+    word-spacing: 3px;
+
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 41px;
+}
+
+.btn {
+    background-color: #6601EB;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+
+}
+
+.btn2 {
+    background-color: #6601EB;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 41px;
+    padding-left: 41px;
+    padding-right: 41px;
+}
+
+.box {
+    display: flex;
+    margin: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    height: max-content;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    justify-content: center;
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.message {
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    justify-content: space-around;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 200;
+
+}
+
+.delete {
+    border: 0px;
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+
+.delete:hover {
+    font-weight: 550;
+}
+
+
+
+/* utility classes */
+
+.underline {
+    text-decoration: underline;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.circle {
+    border-radius: 50px;
+}
+
+.ins {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.width1 {
+    width: 300px;
+}
+
+.width2 {
+    width: 550px;
+}
+
+.padding-3 {
+    padding: 3px;
+}
+
+.size-17px {
+    font-size: 17px;
+}
+
+
+/* media query */
+
+@media screen and (max-width:1240px) {
+
+    .inputs {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .ins {
+        margin: 2px;
+        padding: 8px;
+    }
+
+    .width1 {
+        width: 230px;
+    }
+
+    .width2 {
+        width: 400px;
+        margin-left: 110px;
+    }
+}
+
+
+@media screen and (max-width:730px) {
+    .heading {
+        font-size: 23px;
+    }
+
+    .width1 {
+        width: 200px;
+    }
+
+    .width2 {
+        width: 300px;
+        margin: 0px;
+    }
+
+    .ins {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .message {
+        padding: 40px;
+        font-size: 18px;
+    }
+
+    .align-center {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .btn2 {
+        position: relative;
+        top: -71px;
+        left: 250px;
+    }
+
+    .mg-l {
+        margin-right: 40px;
+    }
+}
+
+
+@media screen and (max-width:425px) {
+    header {
+        height: 30px;
+
+    }
+
+    .heading {
+        font-size: 18px;
+        padding: 5px;
+        margin-left: 5px;
+    }
+
+    .message {
+        padding: 17px;
+        font-size: 9px;
+    }
+
+    .ins {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .width1 {
+        width: 120px;
+    }
+
+    .width2 {
+        width: 220px;
+    }
+
+    .btn2 {
+        top: -62px;
+        left: 207px;
+    }
+
+    .size-17px {
+        font-size: 15px;
+    }
+
+}
