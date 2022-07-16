@@ -45,6 +45,13 @@ header {
     cursor: pointer;
 
 }
+.btn2:hover{
+    background-color: #8c3bf6;
+}
+.btn:hover{
+    background-color: #8c3bf6;
+}
+
 
 .text {
     display: flex;
