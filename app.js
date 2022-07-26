@@ -11,7 +11,7 @@ getNotes();
 function addNotes() {
     let note = document.getElementById('notes').value;
 
-    if (note === "") {
+    if (note === undefined) {
         return 0
     }
     else {
