@@ -35,6 +35,7 @@ header {
     color: white;
     width: 100px;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
 
 }
 
@@ -43,15 +44,19 @@ header {
     color: white;
     font-size: 20px;
     cursor: pointer;
+    transition: all 0.4s ease-in-out;
 
 }
 
 .btn2:hover {
     background-color: #8c3bf6;
+    color:black;
 }
 
 .btn:hover {
     background-color: #8c3bf6;
+    color:black;
+    letter-spacing: 2px;
 }
 
 
