@@ -66,6 +66,7 @@ header {
 
 .box {
     display: flex;
+    align-items: center;
     margin: 20px;
     border: 1px solid grey;
     border-radius: 20px;
@@ -92,6 +93,7 @@ header {
     padding: 40px;
     font-size: 18px;
     font-weight: 200;
+    width: 100%;
 
 }
 

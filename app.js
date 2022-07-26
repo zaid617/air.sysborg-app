@@ -36,7 +36,7 @@ function add2() {
         <p id="time${i}" class="padding-3 size-17px">2 minutes ago</p>
         <button class="delete" class="padding-3 size-17px">Delete</button>
         </div>
-        <div class="message" id="message${i}"></div>
+        <div class="message" ><p id="message${i}"></p></div>
         </div>`
 
         document.getElementById(`message${i}`).innerHTML = notes[i]
