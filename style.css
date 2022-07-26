@@ -217,10 +217,16 @@ header {
         top: -37px;
         left: 2px;
     }
+    .inputs{
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 0px;
+    }
 }
 
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:515px) {
     header {
         height: 30px;
 
