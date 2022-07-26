@@ -45,10 +45,12 @@ header {
     cursor: pointer;
 
 }
-.btn2:hover{
+
+.btn2:hover {
     background-color: #8c3bf6;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #8c3bf6;
 }
 
@@ -170,7 +172,7 @@ header {
 }
 
 
-@media screen and (max-width:730px) {
+@media screen and (max-width:770px) {
     .heading {
         font-size: 23px;
     }
@@ -202,12 +204,18 @@ header {
 
     .btn2 {
         position: relative;
-        top: -71px;
-        left: 250px;
+        top: -70px;
+        left: 177px;
     }
 
     .mg-l {
         margin-right: 40px;
+    }
+
+    .position {
+        position: relative;
+        top: -37px;
+        left: 2px;
     }
 }
 
@@ -244,7 +252,7 @@ header {
 
     .btn2 {
         top: -62px;
-        left: 207px;
+        left: 133px;
     }
 
     .size-17px {
