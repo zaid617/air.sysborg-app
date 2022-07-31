@@ -20,21 +20,24 @@ function addNotes() {
         notes.push(note)
         localStorage.setItem("newNote", JSON.stringify(notes))
         add();
+        document.getElementById('notes').value = "";
     }
+    
 
 }
 
 function addNotes2() {
     let pic = document.getElementById('upload').value;
-    if (pic == "") {
+    if (pic === "") {
         return;
+        
     }
     else {
         notes.push(pic)
         localStorage.setItem("newNote", JSON.stringify(notes))
         add();
+        document.getElementById('upload').value = ""
     }
-    
 }
 
 // adding data when page is refresh 
