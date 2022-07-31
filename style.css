@@ -194,10 +194,14 @@ input[type="file" i] {
         width: 400px;
         margin-left: 110px;
     }
+
+    input[type="file" i] {
+        top: 169px;
+    }
 }
 
 
-@media screen and (max-width:770px) {
+@media screen and (max-width:776px) {
     .heading {
         font-size: 23px;
     }
@@ -219,6 +223,13 @@ input[type="file" i] {
     .message {
         padding: 40px;
         font-size: 18px;
+    }
+
+    input[type="file" i] {
+        top: 155px;
+        left: 546px;
+        width: 30px;
+        height: 36px;
     }
 
     .align-center {
@@ -290,4 +301,10 @@ input[type="file" i] {
         font-size: 15px;
     }
 
+    input[type="file" i]{
+    top: 121px;
+    left: 333px;
+    width: 30px;
+    height: 28px;
+    }
 }

@@ -1,4 +1,5 @@
 let notes = [];
+let num = ""
 
 // retriving data from localstorage when page is relaod
 let getNotes = () => {
@@ -48,7 +49,7 @@ function add2() {
         <div class="info">
         <p id="ip${i}" class="padding-3 size-17px underline"><strong>192.168.100.1</strong></p>
         <p id="time${i}" class="padding-3 size-13px">few moments ago</p>
-        <button id="${i}" onClick="reply_click(this.id)" class="delete padding-3 size-17px">Delete</button>
+        <button id="${i}" onClick="deleteItem(this.id)" class="delete padding-3 size-17px">Delete</button>
         </div>
         <div class="message" id="message${i}"></div>
         </div>`
@@ -71,7 +72,7 @@ function add() {
             <div class="info">
             <p id="ip${i}" class="padding-3 size-17px underline"><strong>192.168.100.1</strong></p>
             <p id="time${i}" class="padding-3 size-13px">few moments ago</p>
-            <button id="${i}" onClick="reply_click(this.id)" class="delete padding-3 size-17px">Delete</button>
+            <button id="${i}" onClick="deleteItem(this.id)" class="delete padding-3 size-17px">Delete</button>
             </div>
             <div class="message" id="message${i}"></div>
             </div>`
@@ -99,9 +100,8 @@ function clearFunc() {
     }
 }
 
-function reply_click(clicked_id)
+function deleteItem(clicked_id)
   {
-      alert(clicked_id);
       num = clicked_id;
       notes.splice(num,1);
       localStorage.removeItem("newNote")
