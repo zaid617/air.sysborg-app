@@ -44,13 +44,13 @@ function add2() {
     for (let i = 0; i < notes.length; i++) {
 
         section.innerHTML +=
-            `<div class="box">
+        `<div class="box" id="box${i}">
         <div class="info">
         <p id="ip${i}" class="padding-3 size-17px underline"><strong>192.168.100.1</strong></p>
         <p id="time${i}" class="padding-3 size-13px">few moments ago</p>
-        <button class="delete" class="padding-3 size-17px">Delete</button>
+        <button id="${i}" onClick="reply_click(this.id)" class="delete padding-3 size-17px">Delete</button>
         </div>
-        <div class="message" ><p id="message${i}"></p></div>
+        <div class="message" id="message${i}"></div>
         </div>`
 
         document.getElementById(`message${i}`).innerHTML = notes[i]
@@ -67,11 +67,11 @@ function add() {
         
         
         section.innerHTML +=
-            `<div class="box">
+            `<div class="box" id="box${i}">
             <div class="info">
             <p id="ip${i}" class="padding-3 size-17px underline"><strong>192.168.100.1</strong></p>
             <p id="time${i}" class="padding-3 size-13px">few moments ago</p>
-            <button class="delete" class="padding-3 size-17px">Delete</button>
+            <button id="${i}" onClick="reply_click(this.id)" class="delete padding-3 size-17px">Delete</button>
             </div>
             <div class="message" id="message${i}"></div>
             </div>`
@@ -99,3 +99,13 @@ function clearFunc() {
     }
 }
 
+function reply_click(clicked_id)
+  {
+      alert(clicked_id);
+      num = clicked_id;
+      notes.splice(num,1);
+      localStorage.removeItem("newNote")
+      localStorage.setItem("newNote", JSON.stringify(notes))
+      document.getElementById(`box${num}`).style.display = "none"
+      num = "";
+  }
