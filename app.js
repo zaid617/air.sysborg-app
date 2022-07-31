@@ -1,5 +1,6 @@
 let notes = [];
 
+// retriving data from localstorage when page is relaod
 let getNotes = () => {
     let takeNote = localStorage.getItem("newNote");
     notes = JSON.parse(takeNote) || []
@@ -22,18 +23,31 @@ function addNotes() {
 
 }
 
+function addNotes2() {
+    let pic = document.getElementById('upload').value;
+    if (pic == "") {
+        return;
+    }
+    else {
+        notes.push(pic)
+        localStorage.setItem("newNote", JSON.stringify(notes))
+        add();
+    }
+    
+}
+
+// adding data when page is refresh 
 
 function add2() {
 
     let section = document.getElementById('section');
-
     for (let i = 0; i < notes.length; i++) {
 
         section.innerHTML +=
             `<div class="box">
         <div class="info">
         <p id="ip${i}" class="padding-3 size-17px underline"><strong>192.168.100.1</strong></p>
-        <p id="time${i}" class="padding-3 size-17px">2 minutes ago</p>
+        <p id="time${i}" class="padding-3 size-13px">few moments ago</p>
         <button class="delete" class="padding-3 size-17px">Delete</button>
         </div>
         <div class="message" ><p id="message${i}"></p></div>
@@ -43,33 +57,45 @@ function add2() {
     }
 
 }
+
+// adding data when any text or image is submit 
+
 function add() {
 
     let section = document.getElementById('section');
-
     for (let i = notes.length - 1; i < notes.length; i++) {
-
+        
+        
         section.innerHTML +=
             `<div class="box">
-        <div class="info">
-        <p id="ip${i}" class="padding-3 size-17px underline"><strong>192.168.100.1</strong></p>
-        <p id="time${i}" class="padding-3 size-17px">2 minutes ago</p>
-        <button class="delete" class="padding-3 size-17px">Delete</button>
-        </div>
-        <div class="message" id="message${i}"></div>
-        </div>`
-
-        document.getElementById(`message${i}`).innerHTML = notes[i]
+            <div class="info">
+            <p id="ip${i}" class="padding-3 size-17px underline"><strong>192.168.100.1</strong></p>
+            <p id="time${i}" class="padding-3 size-13px">few moments ago</p>
+            <button class="delete" class="padding-3 size-17px">Delete</button>
+            </div>
+            <div class="message" id="message${i}"></div>
+            </div>`
+            
+            document.getElementById(`message${i}`).innerHTML = notes[i]
     }
 
 }
 
+// clear all data in dashboard
+
 function clearFunc() {
     let section = document.getElementById('section');
-    alert('Do you really want to delete all notes ?')
-    localStorage.removeItem('newNote')
-    section.innerHTML = "";
-    notes = [];
+
+    let clear = confirm('Do you really want to delete all notes ?');
+
+    if (clear) {
+        localStorage.removeItem('newNote')
+        section.innerHTML = "";
+        notes = [];
+    }
+
+    else{
+        return;
+    }
 }
 
-console.log(notes[7]);

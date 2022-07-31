@@ -15,7 +15,7 @@
     <header>
         <h3 class="heading">Shared clipboard over the Air-by <strong>sysBorg</strong></h3>
     </header>
-    <div class="inputs">
+    <form class="inputs" onsubmit="addNotes2(); return false">
 
         <div>
             <input type="text" class="width1 ins text-align" placeholder="Class ID">
@@ -23,14 +23,15 @@
 
 
         <div class="align-center">
-            <input type="text" class="width2 ins text-align" id="notes" placeholder="Class ID">
+            <input type="text" class="width2 ins text-align" id="notes" placeholder="Enter text and link here">
             <button class="btn ins" onclick="addNotes()">Submit</button>
+            <input type="file" title="upload then click on submit" accept="image/*" type="submit" id="upload">
              <button class="ins btn2"><i class="fa-solid fa-cloud-arrow-up"></i></button>
         </div>
         <div>
         <button class="btn ins position" onclick="clearFunc()">Clear</button>
         </div>
-    </div>
+    </form>
 
     <section class="text" id="section">
         

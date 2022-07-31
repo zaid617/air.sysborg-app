@@ -9,6 +9,7 @@ header {
     height: 59px;
     background-color: #6601EB;
     padding: 10px;
+    
 
 }
 
@@ -32,7 +33,7 @@ header {
 
 .btn {
     background-color: #6601EB;
-    color: white;
+    color: aliceblue;
     width: 100px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
@@ -41,7 +42,7 @@ header {
 
 .btn2 {
     background-color: #6601EB;
-    color: white;
+    color: aliceblue;
     font-size: 20px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
@@ -50,13 +51,13 @@ header {
 
 .btn2:hover {
     background-color: #8c3bf6;
-    color:black;
+    color: white;
 }
 
 .btn:hover {
     background-color: #8c3bf6;
-    color:black;
-    letter-spacing: 2px;
+    color: white;
+    letter-spacing: 1px;
 }
 
 
@@ -76,6 +77,7 @@ header {
     border: 1px solid grey;
     border-radius: 20px;
     height: max-content;
+    box-shadow: 0px 0px 8px 0px rgb(65, 64, 64);
 }
 
 .info {
@@ -113,6 +115,17 @@ header {
     font-weight: 550;
 }
 
+input[type="file" i] {
+    width: 45px;
+    position: absolute;
+    padding: 0px;
+    border-radius: 10px;
+    height: 40px;
+    z-index: 10;
+    top: 123px;
+    opacity: 0;
+    cursor: pointer;
+}
 
 
 /* utility classes */
@@ -123,6 +136,7 @@ header {
 
 .text-align {
     text-align: center;
+    box-shadow: 0px 0px 5px 0px grey;
 }
 
 .circle {
@@ -145,10 +159,15 @@ header {
 
 .padding-3 {
     padding: 3px;
+    text-align: center;
+    font-size: 12px;
 }
 
 .size-17px {
     font-size: 17px;
+}
+.size-13px {
+    font-size: 13px;
 }
 
 
