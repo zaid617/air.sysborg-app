@@ -308,3 +308,10 @@ input[type="file" i] {
     height: 28px;
     }
 }
+
+@media screen and (max-width:375px){
+    input[type="file" i]{
+        top: 121px;
+        left: 305px;
+        }
+}
